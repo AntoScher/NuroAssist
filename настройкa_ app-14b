@@ -1,0 +1,88 @@
+Настройка GPU (GTX 1050 Ti):
+Требования:
+
+Установите CUDA Toolkit 11.8
+
+Обновите драйверы до последней версии через GeForce Experience
+
+Проверьте поддержку CUDA:
+
+powershell
+Copy
+nvidia-smi  # Должна быть видна ваша GPU
+Оптимизации:
+
+python
+Copy
+options = {
+    'num_gpu': 25,     # Максимум для 4GB VRAM
+    'main_gpu': 0,      # Использовать только основную GPU
+    'low_vram': True    # Активировать специальный режим
+}
+Проверка GPU-оффлоадинга:
+
+powershell
+Copy
+ollama run deepseek-r1:14b "Тест GPU" --verbose
+В логах ищите:
+
+Copy
+GPU layers: 25/43
+VRAM used: 3.54/4.00 GB
+Дополнительные улучшения:
+Используйте квантованную модель:
+
+powershell
+Copy
+ollama pull deepseek-r1:14b:q4_K_M  # Скачать оптимизированную версию
+В коде:
+
+python
+Copy
+MODEL_NAME = "deepseek-r1:14b:q4_K_M"
+Ограничьте размер ответа:
+
+python
+Copy
+options['max_tokens'] = 500  # Не более 500 токенов в ответе
+Добавьте кеширование (для повторяющихся запросов):
+
+python
+Copy
+from functools import lru_cache
+
+@lru_cache(maxsize=100)
+def cached_generate(prompt: str) -> str:
+    # ... ваш код генерации ...
+Типичные проблемы и решения:
+Проблема	Решение
+"CUDA out of memory"	Уменьшите num_gpu до 15-20
+Медленные ответы	Увеличьте num_thread до 6
+Ошибки подключения к Ollama	Перезапустите службу: net stop ollama && net start ollama
+Высокая загрузка CPU	Используйте num_gpu: 30+
+Проверка производительности:
+Тест 1 (CPU-only):
+
+python
+Copy
+options = {'num_gpu': 0, 'num_thread': 6}
+Ожидаемая скорость: 1.5-3 токена/сек
+
+Тест 2 (GPU hybrid):
+
+python
+Copy
+options = {'num_gpu': 25, 'num_thread': 4}
+Ожидаемая скорость: 4-7 токенов/сек
+
+Рекомендуемые параметры для вашей системы:
+python
+Copy
+options = {
+    'temperature': 0.7,
+    'num_ctx': 2048,
+    'num_gpu': 20,
+    'num_thread': 5,
+    'low_vram': True,
+    'repeat_penalty': 1.2
+}
