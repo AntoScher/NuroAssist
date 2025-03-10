@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DeepSeek Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>DeepSeek Assistant</h1>
+        <div class="chat-box" id="chatBox"></div>
+        <div class="input-area">
+            <textarea id="userInput" placeholder="Введите ваш вопрос..."></textarea>
+            <button onclick="sendQuestion()">Отправить</button>
+        </div>
+    </div>
+
+    <script>
+        async function sendQuestion() {
+            const input = document.getElementById('userInput');
+            const chatBox = document.getElementById('chatBox');
+
+            if (!input.value.trim()) return;
+
+            // Добавляем вопрос в историю
+            chatBox.innerHTML += `<div class="user-message">${input.value}</div>`;
+
+            try {
+                const response = await fetch('/ask', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({prompt: input.value})
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    chatBox.innerHTML += `<div class="bot-message">${data.response}</div>`;
+                } else {
+                    chatBox.innerHTML += `<div class="error">Ошибка: ${data.error}</div>`;
+                }
+            } catch (error) {
+                chatBox.innerHTML += `<div class="error">Ошибка соединения</div>`;
+            }
+
+            input.value = '';
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
+</body>
+</html>
