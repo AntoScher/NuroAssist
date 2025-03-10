@@ -6,8 +6,8 @@ load_dotenv()
 
 app = Flask(__name__)
 
-# Конфигурация модели
-MODEL_NAME = "deepseek-r1-distill-qwen-32b"
+# Конфигурация модели DeepSeek-R1-Distill-Qwen-32B
+MODEL_NAME = "deepseek-r1:32b"
 SYSTEM_PROMPT = "Ты - профессиональный ассистент. Отвечай точно и структурированно."
 
 
