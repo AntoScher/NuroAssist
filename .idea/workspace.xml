@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="974018f8-3a65-4a5e-8eb9-1041289fc529" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app-32b.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app-14b.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +31,12 @@
     &quot;assignee&quot;: &quot;AntoScher&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/AntoScher/NuroAssist.git&quot;,
-    &quot;accountId&quot;: &quot;5bad4c84-4ea0-4d80-b0d5-1a6194b60bc1&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/AntoScher/NuroAssist.git",
+    "accountId": "f2bcbaf9-e4de-47a8-b373-e3989a92ecdc"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -47,11 +49,14 @@
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "Python.app-14b_test.executor": "Run",
+    "Python.app-32b.executor": "Run",
     "Python.app.executor": "Run",
     "Python.test-port.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main"
+    "com.codeium.enabled": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
