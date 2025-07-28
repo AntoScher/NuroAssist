@@ -14,7 +14,7 @@ MODEL_NAME = os.getenv("MODEL_NAME")
 
 
 #TELEGRAM_TOKEN = 'вставь_токен_бота_сюда'
-#OLLAMA_URL = 'http://localhost:11435/api/generate'
+#OLLAMA_URL = 'http://localhost:11434/api/generate'
 #MODEL_NAME = 'deepseek-r1:32b'
 
 # Настраиваем логирование

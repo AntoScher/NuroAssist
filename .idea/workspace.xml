@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17be56c1-05f3-4534-af9c-93ebe8c16ab0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app-32b.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot32.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/NuroAssist.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NuroAssist.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,20 +48,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.app-0.executor&quot;: &quot;Run&quot;,
-    &quot;Python.app-14b.executor&quot;: &quot;Run&quot;,
-    &quot;Python.app-14b_test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.app-32b-test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.bot.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test-port.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.app-0.executor": "Run",
+    "Python.app-14b.executor": "Run",
+    "Python.app-14b_test.executor": "Run",
+    "Python.app-32b-test.executor": "Run",
+    "Python.app-32b.executor": "Run",
+    "Python.bot.executor": "Run",
+    "Python.bot32.executor": "Run",
+    "Python.test-port.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
