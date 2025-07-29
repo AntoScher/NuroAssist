@@ -89,7 +89,7 @@ def process_query(prompt):
         response = requests.post(
             OLLAMA_URL,
             json=request_data,
-            timeout=120  # 2 минуты таймаут
+            timeout=300  # 2 минуты таймаут
         )
         
         # Проверяем статус ответа
